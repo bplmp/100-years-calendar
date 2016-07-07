@@ -1,7 +1,7 @@
 var currentYear = new Date().getFullYear();
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(displayWidth, displayHeight);
   background(0);
   noStroke();
 
@@ -56,12 +56,12 @@ function drawCalendar(yearBorn) {
     }
   }
 
-  if (windowWidth > windowHeight) {
+  if (displayWidth > displayHeight) {
     // horizontal mode:
-    var margin = windowWidth / marginFactor;
-    var radius = (windowWidth - margin * 2) / daysInYear;
-    var rowWidth = (windowWidth - margin * 2) / daysInYear;
-    var rowHeight = (windowHeight - (margin * 2)) / yearsTotal;
+    var margin = displayWidth / marginFactor;
+    var radius = (displayWidth - margin * 2) / daysInYear;
+    var rowWidth = (displayWidth - margin * 2) / daysInYear;
+    var rowHeight = (displayHeight - (margin * 2)) / yearsTotal;
 
     for (var j = 0; j < yearsTotal; j++) {
       for (var i = 0; i < daysInYear; i++) {
@@ -74,11 +74,11 @@ function drawCalendar(yearBorn) {
 
         // var totalDayIndex = (j * daysInYear) + i;
         // if (totalDayIndex%6 === 0 ) {
-        //   radius = ((windowWidth - margin * 2) / daysInYear) / 1.3;
+        //   radius = ((displayWidth - margin * 2) / daysInYear) / 1.3;
         //   ellipse(margin + (0 + x), margin + (j * rowHeight), radius, radius);
-        //   radius = (windowWidth - margin * 2) / daysInYear;
+        //   radius = (displayWidth - margin * 2) / daysInYear;
         // } else {
-        //   radius = (windowWidth - margin * 2) / daysInYear;
+        //   radius = (displayWidth - margin * 2) / daysInYear;
         //   ellipse(margin + (0 + x), margin + (j * rowHeight), radius, radius);
         // }
 
@@ -87,10 +87,10 @@ function drawCalendar(yearBorn) {
     }
   } else {
     // vertical mode:
-    var margin = windowHeight / marginFactor;
-    var radius = (windowHeight - margin * 2) / daysInYear;
-    var rowWidth = (windowWidth - margin * 2) / yearsTotal;
-    var rowHeight = (windowHeight - (margin * 2)) / daysInYear;
+    var margin = displayHeight / marginFactor;
+    var radius = (displayHeight - margin * 2) / daysInYear;
+    var rowWidth = (displayWidth - margin * 2) / yearsTotal;
+    var rowHeight = (displayHeight - (margin * 2)) / daysInYear;
 
     for (var j = 0; j < yearsTotal; j++) {
       for (var i = 0; i < daysInYear; i++) {
