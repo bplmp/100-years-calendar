@@ -24,7 +24,7 @@ a, a:hover {
 html,
 body {
   height: 100%;
-  background: url('../img/calendar-lg.jpg') no-repeat center center fixed;
+  background: url('/100-years-calendar/img/calendar-lg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
