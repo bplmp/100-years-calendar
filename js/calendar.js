@@ -71,7 +71,7 @@ function drawCalendar(dateBorn) {
     if (j === 0 && i < dayBorn - 1) { // before born
       fill(0);
     } else if (beforeToday(j, i)) { // after born, before today
-      fill(255, 204, 0);
+      fill('#f1ca4a');
     } else if (j === 100 && i > dayBorn - 1) { // after 100 years, after birthdate
       fill(0);
     } else {
