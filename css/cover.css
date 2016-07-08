@@ -48,7 +48,7 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
-  width: 500px;
+  width: 100%;
 }
 .inner {
   padding: 30px;
@@ -56,5 +56,13 @@ body {
 .cover {
   padding: 20px;
   background-color: #000;
-  border-radius: 5px;
+  border-radius: 0;
+}
+@media only screen and (min-width : 480px) {
+  .cover-container {
+    width: 500px;
+  }
+  .cover {
+    border-radius: 5px;
+  }
 }
