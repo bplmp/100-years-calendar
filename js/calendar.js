@@ -31,6 +31,8 @@ function drawCalendar(dateBorn) {
   var dayBorn = calculateFullDay(dateBorn);
   var dowBorn = dateBorn.getDay();
 
+  document.title = '100 Years Calendar – Born ' + dateBorn.toDateString();
+
   var yearsDifference = currentYear - yearBorn;
   var yearsPassed = yearsDifference - 1;
   var yearsLeft = 100 - yearsDifference;
