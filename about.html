@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>100 Years Calendar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/100-years-calendar/vendor/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/100-years-calendar/vendor/css/bootstrap-datepicker.standalone.min.css" media="screen" title="no title" charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="/100-years-calendar/vendor/js/jquery-2.2.4.min.js" charset="utf-8"></script>
+  <script src="/100-years-calendar/vendor/js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="/100-years-calendar/vendor/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+  <style media="screen">
+    body {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-family: 'Roboto', monospace;
+      font-size: 20px;
+    }
+
+    .form-control {
+      display: inline;
+      width: 150px;
+      border: 1.5px solid #229af5;
+    }
+    .full {
+      width: 100%;
+    }
+    a, a:hover {
+      text-decoration: none;
+      cursor: pointer;
+      color: #229af5;
+      border-bottom: solid 1.5px #229af5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-xs-12">
+        <div class="">
+          <h1 style="margin-bottom: 30px;"><a href="http://www.bernardol.com/100-years-calendar/">100 Years Calendar</a></h1>
+
+          <p>
+            The japanese artist <a href="https://en.wikipedia.org/wiki/On_Kawara">On Kawara</a> is well known for his series of paintings called <i>Today</i>. In these, he painted the day's date on white letters against a solid background color.
+          </p>
+          <p>
+            <figure class="figure">
+              <img class="full" src="/100-years-calendar/img/date-painting.jpg" alt="Kawara Date painting" />
+              <figcaption class="figcaption"><h5><a href="https://en.wikipedia.org/wiki/On_Kawara#/media/File:Oct_31,_1973_(Today_Series,_%22Tuesday%22)_On_Kawara.JPG">Source</a></h5>
+              </figcaption>
+          </p>
+          <p>
+            Kawara began the series in 1966 and continued intermitently until his death in 2014, completing almost 3,000 paintings.
+          </p>
+          <p>
+            Lesser known is the calendar on which Kawara registered with black circles the days in which he had done a date painting &mdash; the <i>One Hundred Years Calendar</i>.
+          </p>
+          <p>
+            <figure class="figure">
+              <img class="full" src="/100-years-calendar/img/calendar-detail.jpg" alt="Kawara Calendar detail" />
+              <p>
+
+              </p>
+              <img class="full" src="/100-years-calendar/img/calendar.jpg" alt="Kawara Calendar" />
+              <figcaption class="figure-caption"><h5><a href="http://www.hkst.de/de/aktuelles-herbst-2014/zeit.html">Source</a></h5></figcaption>
+            </figure>
+          </p>
+          <p>
+            This 68,6 × 129,5 cm calendar increadibly contains one hundred years. Each row is a year, spelled out day by day.
+          </p>
+          <p>
+            The idea that you can summarize one hundred years worth of days &mdash; essentially a lifetime &mdash; on a single image is what I wanted to reproduce here.
+          </p>
+          <p>
+            In the digital version I've put together, each circle is a day, and each row is a year (or each column, if your display is vertical). The yellow circles represent the days passed. The smaller circles are Sundays, as on Kawara's calendar.
+          </p>
+          <h5 class="pull-right"><a href="http://www.bernardol.com">Bernardo Loureiro, 2016</a></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      $('#datepicker').datepicker({
+        format: "yyyy/mm/dd",
+        startDate: "1916/01/01",
+        endDate: "2016/01/01",
+        startView: 3,
+        maxViewMode: 3,
+        calendarWeeks: true,
+        autoclose: true,
+        defaultViewDate: {
+          year: 1916,
+          month: 01,
+          day: 01
+        }
+      });
+    }
+    var calendar = {
+      generate: function() {
+        var d = new Date($('#datepicker').datepicker('getDate'));
+        var year = d.getFullYear();
+        var month = d.getMonth();
+        var day = d.getDate();
+        var query = '?y=' + year + '&m=' + month + '&d=' + day;
+        var uri = 'calendar.html' + query;
+        console.log(uri);
+        window.location = uri;
+      }
+    }
+  </script>
+</body>
+
+</html>

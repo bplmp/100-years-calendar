@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="background-full">
 
 <head>
   <meta charset="utf-8">
@@ -8,87 +8,33 @@
   <link rel="stylesheet" href="/100-years-calendar/vendor/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="/100-years-calendar/vendor/css/bootstrap-datepicker.standalone.min.css" media="screen" title="no title" charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/100-years-calendar/css/cover.css" media="screen" title="no title" charset="utf-8">
   <script src="/100-years-calendar/vendor/js/jquery-2.2.4.min.js" charset="utf-8"></script>
   <script src="/100-years-calendar/vendor/js/bootstrap.min.js" charset="utf-8"></script>
   <script src="/100-years-calendar/vendor/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
-  <style media="screen">
-    body {
-      padding-top: 30px;
-      padding-bottom: 30px;
-      font-family: 'Roboto', monospace;
-      font-size: 20px;
-    }
-
-    .form-control {
-      display: inline;
-      width: 150px;
-      border: 1.5px solid #229af5;
-    }
-    .full {
-      width: 100%;
-    }
-    a {
-      text-decoration: none;
-      cursor: pointer;
-      color: #229af5;
-      border-bottom: solid 1.5px #229af5;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-xs-12">
-        <div class="">
-
-          <h1>100 Years Calendar</h1>
-          <h3>Generate your 100 Years Calendar,<br>starting on your birthdate:</h3>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="inner cover">
+          <p>
+            The japanese artist <a href="https://en.wikipedia.org/wiki/On_Kawara">On Kawara</a> designed a <i>100 Years Calendar</i>, on which he marked the days he did his <i>Date Paintings</i>.
+          </p>
+          <p>
+            Generate your own calendar, starting on your birthdate.
+          </p>
           <p>
             <input id="datepicker" type="text" class="form-control" placeholder="yyyy/mm/dd">
-            <button class="btn btn-default" onclick="calendar.generate()">Submit</button>
+            <button id="generate" class="form-control" onclick="calendar.generate()">Generate</button>
           </p>
-          <hr>
-          <h3>About:</h3>
-          <p>
-            The japanese artist <a href="https://en.wikipedia.org/wiki/On_Kawara">On Kawara</a> is well known for his series of paintings called <i>Today</i>. In these, he painted the day's date on white letters against a solid background color.
-          </p>
-          <p>
-            <figure class="figure">
-              <img class="full" src="/100-years-calendar/img/date-painting.jpg" alt="Kawara Date painting" />
-              <figcaption class="figcaption"><a href="https://en.wikipedia.org/wiki/On_Kawara#/media/File:Oct_31,_1973_(Today_Series,_%22Tuesday%22)_On_Kawara.JPG">Source</a>
-              </figcaption>
-          </p>
-          <p>
-            Kawara began the series in 1966 and continued intermitently until his death in 2014, completing almost 3,000 paintings.
-          </p>
-          <p>
-            Lesser known is the calendar on which Kawara registered with black circles the days in which he had done a date painting &mdash; the <i>One Hundred Years Calendar</i>.
-          </p>
-          <p>
-            <figure class="figure">
-              <img class="full" src="/100-years-calendar/img/calendar-detail.jpg" alt="Kawara Calendar detail" />
-              <p>
-
-              </p>
-              <img class="full" src="/100-years-calendar/img/calendar.jpg" alt="Kawara Calendar" />
-              <figcaption class="figure-caption"><a href="http://www.hkst.de/de/aktuelles-herbst-2014/zeit.html">Source</a></figcaption>
-            </figure>
-          </p>
-          <p>
-            This 68,6 × 129,5 cm calendar increadibly contains one hundred years. Each row is a year, spelled out day by day.
-          </p>
-          <p>
-            The idea that you can summarize one hundred years worth of days &mdash; essentially a lifetime &mdash; on a single image is what I wanted to reproduce here.
-          </p>
-          <p>
-            In the digital version I've put together, each dot is a day, and each row is a year (or each column, if your display is vertical). The smaller circles are Sundays, as on Kawara's calendar.
-          </p>
-          <h5 class="pull-right"><a href="http://www.bernardol.com">Bernardo Loureiro, 2016</a></h5>
+          <a href="/about.html">About</a>&nbsp;|&nbsp;<a href="http://www.bernardol.com">Bernardo Loureiro</a>
         </div>
       </div>
     </div>
   </div>
+
 
   <script type="text/javascript">
     window.onload = function() {
